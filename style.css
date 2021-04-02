@@ -1,0 +1,288 @@
+html{
+    scroll-behavior: smooth;
+}
+*::selection{
+    background: black;
+    color:white;
+}
+body{
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    height: 100%;
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+}
+h2{
+    margin: 0;
+    padding:0;
+}
+a{
+    color:inherit;
+    text-decoration: none;
+}
+p{
+    margin: 0;
+}
+img{
+    width: 35%;
+    height: 35%;
+}
+h3{
+    margin:0;
+    padding:0;
+}
+.displayBlock{
+    display:block;
+}
+section{
+    min-height: 100vh;
+    height:auto;
+    width: 70vw;
+    color: black;
+    display: flex;
+    justify-content: center;
+    background: white;
+    animation: sectionOut 1s;
+}
+section:hover, section:hover h2{
+    color:black;
+}
+section .container{
+    width: 1000px;
+}
+
+section h1{
+    font-size: 35px;
+    color:black;
+    margin-left:15%;
+}
+section h2{
+    color: #c2bcbc;
+    margin-top:20px;
+    border-bottom: 3px solid black;
+}
+section h3{
+    padding-left: 12px;
+    color:rgb(44, 44, 44);
+    border-left: solid 2px black;
+}
+section p{
+    font-size: 12px;
+    padding: 12px 12px 12px 20px;
+    animation: Opacity 1s;
+}
+section a{
+    color:grey;
+    font-size: 14px;
+}
+section a:hover{
+    color:blue;
+    font-size: 13px;
+}
+aside{
+    height: 100vh;
+    min-width: 150px;
+    width:30%;
+    position: fixed;
+    top:0;
+    right:0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(53, 52, 52);
+    animation: asideOut 1s;
+}
+aside:hover{
+    background: rgb(32, 32, 32);
+}
+.asideOut{
+    transform: translateX(0px);
+}
+.burger{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    display:none;
+    cursor: pointer;
+}
+.burger div{
+    min-width: 10px;
+    width: 2vw;
+    height: 3px;
+    display: flex;
+    background: #cccccc;
+    margin-bottom: 5px;
+    margin-left:0;
+}
+.toggle .l1{
+    transform:rotate(-45deg) translate(-5px,6px);
+}
+.toggle .l2{
+    opacity:0;
+}
+.toggle .l3{
+    transform:rotate(45deg) translate(-5px,-6px);
+}
+nav{
+    position: absolute;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    line-height: 150px;
+}
+aside h2{
+    font-size: 35px;
+}
+ul{
+    max-width: 20vw;
+    margin: 0;
+    padding:0;
+}
+ul li{
+    list-style-type: none;
+    color: white;
+    cursor:pointer;
+}
+ul li:hover{
+    font-size:17px;
+    color:grey;
+}
+footer{
+    min-height: 10vh;
+    height:auto;
+    width: 70vw;
+    color: #e4dede;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(53, 52, 52);
+    animation: sectionOut 1s;
+}
+footer a{
+    color:grey;
+}
+footer:hover{
+    background: rgb(32, 32, 32);
+}
+footer a:hover{
+    color:black;
+    font-size:14px;
+}
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: rgba(59, 190, 184, 0)
+  }
+   
+  ::-webkit-scrollbar-thumb {
+    background: #888; 
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: red; 
+  }
+@keyframes asideOut{
+    from{
+
+        transform: translateX(25vw);
+    }
+    to{
+        transform: translateX(0px);
+    }
+}
+@keyframes sectionOut{
+    from{
+        opacity:0;
+        transform: translateX(-80vh);
+    }
+    to{
+        opacity:1;
+        transform: translateX(0px);
+    }
+}
+@keyframes Opacity{
+    from{
+        opacity:0;
+    }
+    to{
+        opacity:1;
+    }
+}
+@media (max-width:1600px){
+    nav{
+        line-height: 100px;
+    }
+    ul li{
+        font-size:14px
+    }
+    ul li:hover{
+        font-size:15px;
+    }
+}
+@media (max-width:1600px){
+    .container{
+        width: 800px;
+    }
+    section h1{
+        margin-left:5%;
+    }
+}
+@media (max-width:1300px){
+    aside h2{
+        font-size: 20px;
+    }
+    ul li{
+        font-size:12px
+    }
+    ul li:hover{
+        font-size:13px;
+    }
+}
+@media (max-width:1200px){
+    aside{
+        animation: asideHide 1s;
+        transform: translateX(45vw);
+        width: 50vw;
+    }
+    aside nav{
+        display:none;
+    }
+    section{
+        width: 95vw;
+    }
+    section h2{
+        padding-left:20px;
+    }
+    section p{
+        padding: 12px 30px 12px 20px;
+    }
+    .burger{
+        display:block;
+    }
+    footer{
+        width: 95vw;
+    }
+    ul li{
+        font-size:15px
+    }
+    ul li:hover{
+        font-size:16px;
+    }
+}
+@media (max-width:1150px){
+    nav{
+        line-height: 100px;
+    }
+}
+@media (max-width:500px){
+    section h1{
+        margin-left:10%;
+    }
+    .container{
+        max-width: 450px;
+    }
+}
